@@ -4,14 +4,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Thirst extends JavaPlugin implements Listener {
+public class Thirst implements Listener {
 
-    private Map<Player, Integer> playerThirst = new HashMap<>();
+    private final Map<Player, Integer> playerThirst = new HashMap<>();
 
     // If a new player join , give him a thirst.
     @EventHandler
