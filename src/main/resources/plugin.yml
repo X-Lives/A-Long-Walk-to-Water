@@ -1,0 +1,10 @@
+name: ALongWalktoWater
+version: '0.1.0'
+main: cn.is52hertz.aLongWalkToWater.ALongWalkToWater
+api-version: '1.21'
+authors: [ Is52hertz ]
+description: A plugin for learning paper.
+website: www.is52hertz.cn
+commands:
+  thirst:
+    description: Print Player's Thirst.
