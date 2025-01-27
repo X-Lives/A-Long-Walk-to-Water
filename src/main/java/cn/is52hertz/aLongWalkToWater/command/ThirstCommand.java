@@ -13,9 +13,9 @@ import org.jetbrains.annotations.NotNull;
 
 public class ThirstCommand implements CommandExecutor {
 
-    private final Thirst thirst;  // Thirst 实例
+    private final Thirst thirst;
 
-    // 构造器中接收 Thirst 实例
+    // Receiving a Thirst instance in a constructor
     public ThirstCommand(Thirst thirst) {
         this.thirst = thirst;
     }
@@ -25,13 +25,13 @@ public class ThirstCommand implements CommandExecutor {
         if (sender instanceof Player player) {
             String playerName = player.getName();
 
-            // 使用 thirst 实例获取玩家口渴值
+            // Getting player thirst values using thirst instances
             TextComponent thirstMessage = Component.text(playerName + ": ")
                     .color(TextColor.color(0x4E9DFF))
                     .decoration(TextDecoration.BOLD, true)
-                    .append(Component.text(thirst.getThirst(player))); // 获取口渴值
+                    .append(Component.text(thirst.getThirst(player))); // Get Thirst Value
 
-            // 发送消息给玩家
+            // Send a message to the player
             player.sendMessage(thirstMessage);
         } else {
             sender.sendMessage("Only players can use this command.");

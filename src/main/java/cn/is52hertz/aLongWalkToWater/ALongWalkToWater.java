@@ -10,15 +10,15 @@ public final class ALongWalkToWater extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // 初始化 Thirst 类
-        // 添加 Thirst 的实例
+        // Initializing the Thirst Class
+        // Adding instances of Thirst
         Thirst thirst = new Thirst();
 
-        // 注册命令执行器
+        // Registering a command executor
         ThirstCommand thirstCommand = new ThirstCommand(thirst);
         Objects.requireNonNull(Bukkit.getPluginCommand("thirst")).setExecutor(thirstCommand);
 
-        // 注册事件监听器
+        // Registering event listeners
         Bukkit.getPluginManager().registerEvents(thirst, this);
 
         getLogger().info("Thirst Plugin Enabled");
