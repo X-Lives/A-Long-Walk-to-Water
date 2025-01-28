@@ -51,5 +51,6 @@ processResources {
 
 jar {
     destinationDirectory = file('D:/WorkSpace/McWorkSpace/MineCraft-Plugins/PaperServer/plugins')
-    archiveFileName = 'ALongWalktoWater' + '-' + version + '.jar' // 如果需要自定义文件名
+    // archiveFileName = 'ALongWalktoWater' + '-' + version + '.jar'
+    archiveFileName = 'ALongWalktoWater' + '.jar'
 }

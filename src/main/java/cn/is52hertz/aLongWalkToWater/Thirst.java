@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class Thirst implements Listener {
 
-    private final Map<Player, Integer> playerThirst = new HashMap<>();
+    public Map<Player, Integer> playerThirst = new HashMap<>();
 
     // If a new player join , give him a thirst.
     @EventHandler
