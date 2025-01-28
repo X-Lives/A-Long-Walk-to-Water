@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'cn.is52hertz'
-version = '0.1.0'
+version = '0.1.1'
 
 repositories {
     mavenCentral()
@@ -47,4 +47,9 @@ processResources {
     filesMatching('plugin.yml') {
         expand props
     }
+}
+
+jar {
+    destinationDirectory = file('D:/WorkSpace/McWorkSpace/MineCraft-Plugins/PaperServer/plugins')
+    archiveFileName = 'ALongWalktoWater' + '-' + version + '.jar' // 如果需要自定义文件名
 }

@@ -4,6 +4,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,6 +20,13 @@ public class Thirst implements Listener {
         if (!playerThirst.containsKey(player)) {
             playerThirst.put(player, 100);
         }
+    }
+
+    // If the player dies, reset.
+    @EventHandler
+    public void onPlayerRespawn(PlayerRespawnEvent event) {
+        Player player = event.getPlayer();
+        setThirst(player, 100);
     }
 
     /**
